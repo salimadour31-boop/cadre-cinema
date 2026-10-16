@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadre Cinéma - Ratios cinématiques</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 id="title">Cadre Cinéma</h1>
+    <select id="lang-select">
+      <option value="fr">Français</option>
+      <option value="en">English</option>
+      <option value="tzm">Tamazight</option>
+    </select>
+  </header>
+  <main>
+    <section class="controls">
+      <label id="label-upload">Importer une image</label>
+      <input type="file" id="image-input" accept="image/*">
+      <div id="drop-zone">Glissez-déposez ou cliquez</div>
+      
+      <label id="label-ratio">Ratio</label>
+      <select id="ratio-select">
+        <option value="2.39">2.39:1 Scope</option>
+        <option value="1.85">1.85:1 Flat</option>
+        <option value="1.78">16:9</option>
+        <option value="1.33">4:3</option>
+        <option value="2.0">2.0:1</option>
+        <option value="custom">Personnalisé</option>
+      </select>
+      <input type="number" id="custom-ratio" placeholder="ex. 2.35" step="0.01" style="display:none">
+      
+      <label id="label-mode">Mode</label>
+      <select id="mode-select">
+        <option value="letterbox">Letterbox (barres)</option>
+        <option value="crop">Crop (recadrage)</option>
+      </select>
+      
+      <label id="label-bar-color">Couleur des barres</label>
+      <input type="color" id="bar-color" value="#000000">
+      
+      <button id="apply-btn">Appliquer</button>
+      <button id="download-btn" disabled>Télécharger PNG</button>
+    </section>
+    <section class="preview">
+      <canvas id="canvas"></canvas>
+    </section>
+  </main>
+  <footer>
+    <p id="footer-text">Outil open source gratuit. Aucune donnée n'est envoyée. MIT License.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
